@@ -1,0 +1,167 @@
+{
+	"parts": [
+		{ "id": "#header", "dataKey": "headerContent", "callback": "setNav" },
+		{ "id": "#footer", "dataKey": "footerContent", "callback": "null" },
+		{ "id": "#page", "dataKey": "page", "callback": "null" },
+		{ "id": "#page-sing", "dataKey": "pageNav", "callback": "null" },
+		{ "id": "#page-guide", "dataKey": "pageRun", "callback": "null" },
+		{ "id": "#data-main", "dataKey": "data-main-content", "callback": "null" },
+		{ "id": "#data-sub", "dataKey": "data-sub-content", "callback": "null" }
+	],
+	"headerContent": [
+		{ "tag": "header", "class": "header", "children": [
+			{ "tag": "a", "href": "index.html", "class": "head-link", "children": [
+					{ "tag": "div", "class": "top-link-txt", "children": [
+						{"tag": "p", "text": "雨見ねあ非公式"},
+						{"tag": "p", "text": "Wikipedia"}
+					]}
+			]},
+			{"tag": "nav", "class":"nav", "children":[
+				{"tag": "input", "type": "checkbox", "id": "nav-toggle", "class": "nav-toggle"},
+				{"tag": "label", "for": "nav-toggle", "class": "nav-btn", "aria-label": "menu-open/close", "children": [
+					{"tag": "span", "class": "nav-btn span"},
+					{"tag": "span", "class": "nav-btn span"},
+					{"tag": "span", "class": "nav-btn span"}
+				]},
+				{"tag": "label", "for": "nav-toggle", "class": "nav-overlay"},
+				{"tag": "ul", "class": "nav-list", "children": [
+					{"tag": "li", "class": "nav-item", "children":[
+						{"tag": "a", "href": "guide-line.html", "class": "nav-link", "text": "ガイドライン"}
+					]},
+					{"tag": "li", "class": "nav-item", "children":[
+						{"tag": "a", "href": "sing_list.html", "class": "nav-link", "text": "SING PAGE"}
+					]}
+				]}
+			]}
+		]}
+	],
+	"footerContent": [
+		{"tag": "footer", "class": "footer", "children":[
+			{"tag": "a", "href": "index.html", "class": "foot-top-link", "text": "雨見ねあ非公式Wikipedia"},
+			{"tag": "nav", "children":[
+				{"tag": "ul", "class": "foot-list", "children":[
+					{"tag": "li", "class": "foot-item", "children":[
+						{"tag": "a", "href": "guide-line.html", "class": "foot-link", "text": "ガイドライン"}
+					]},
+					{"tag": "li", "class": "foot-item", "children":[
+						{"tag": "a", "href": "sing_list.html", "class": "foot-link", "text": "SING PAGE"}
+					]}
+				]}
+			]}
+		]},
+		{"tag": "span", "class": "copy", "text": "2026 WAZ VIDEO CREATE STUDIO"}
+	],
+	"page": [
+		{"tag": "div", "class": "page-block", "children":[
+			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"}
+		]}
+	],
+	"pageNav": [
+		{"tag": "div", "class": "page-block", "children":[
+			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
+			{"tag": "div", "text": ">"},
+			{"tag": "span", "class": "nomal", "text": "SONG_LIST"}
+		]}
+	],
+	"pageRun": [
+		{"tag": "div", "class": "page-block", "children":[
+			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
+			{"tag": "div", "text": ">"},
+			{"tag": "span", "class": "nomal", "text": "guide-line"}
+		]}
+	],
+	"data-main-content": [
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "初配信日"},
+			{"tag": "li", "class": "data-protocol", "children":[
+				{"tag": "time", "datetime": "2022-11-05", "text": "2022年11月5日"}
+			]}
+		]},
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "誕生日"},
+			{"tag": "li", "class": "data-protocol", "text": "6月6日"}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "ユニット"},
+			{"tag": "ul", "class":"data-protocol data-row", "children": [
+				{"tag": "li", "class": "unit", "children":[
+					{"tag": "a", "href": "https://www.youtube.com/playlist?list=PLDWod9bzeKm046jvYVveP77UbTlCjT3FK", "target": "blank", "class": "unit-link", "children":[
+						{"tag": "p", "class": "unit-text", "text": "狐雨雪翡"}
+					]}
+					]},
+				{"tag": "li", "class": "unit", "text": "/"},
+				{"tag": "li", "class": "unit", "children":[
+					{"tag": "a", "href": "https://www.youtube.com/playlist?list=PLEF5rQ7dc6hTem4aRNn4-E_XJkKOTdPPx", "target": "blank", "class": "unit-link", "children":[
+						{"tag": "p", "class": "unit-text", "text": "ONRAIFX"}
+					]}
+				]}
+			]}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "イラストレーター"},
+			{"tag": "li", "class": "data-protocol", "text": ""}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "ファンネーム"},
+			{"tag": "li", "class": "data-protocol", "text": "ねあめいと"}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "ファンマーク"},
+			{"tag": "li", "class": "data-protocol", "text": "☔🎤"}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+		{"tag": "li", "class": "data-title", "text": "弾幕"},
+			{"tag": "li", "class": "data-protocol", "text": "💧☔💧🎤💧"}
+		]},
+		{"tag": "ul", "class":"data-block tag", "children":[
+			{"tag": "li", "class": "data-title", "text": "ハッシュタグ"},
+			{"tag": "li", "class": "data-protocol data-column", "children":[
+				{"tag": "li", "class": "hash", "children":[
+					{"tag": "p", "class": "hash-title", "text": "総合タグ:"},
+					{"tag": "a", "href": "https://x.com/hashtag/%E9%9B%A8%E8%A6%8B%E3%81%AD%E3%81%82?src=hashtag_click", "class": "hash-link", "target": "blank", "children":[
+						{"tag": "p", "class": "hash-text", "text": "#雨見ねあ"}
+					]}
+				]},
+				{"tag": "li", "class": "hash", "children":[
+					{"tag": "p", "class": "hash-title", "text": "配信タグ:"},
+					{"tag": "a", "href": "https://x.com/search?q=%23%E3%81%AD%E3%81%82%E3%81%A8%E9%9B%A8%E5%AE%BF%E3%82%8A&src=typed_query&f=top", "class": "hash-link", "target": "blank", "children":[
+						{"tag": "p", "class": "hash-text", "text": "#ねあと雨宿り"}
+					]}
+				]},
+				{"tag": "li", "class": "hash", "children":[
+					{"tag": "p", "class": "hash-title", "text": "FAタグ:"},
+					{"tag": "a", "href": "https://x.com/search?q=%23%E9%9B%A8%E8%A6%8B%E3%81%AD%E3%81%82%E3%83%BC%E3%81%A8&src=typed_query&f=top", "class": "hash-link", "target": "blank", "children":[
+						{"tag": "p", "class": "hash-text", "text": "#雨見ねあーと"}
+					]}
+				]}
+			]}
+		]},
+		{"tag": "ul", "class":"data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "配信内容"},
+			{"tag": "ul", "class":"data-protocol data-row", "children":[
+				{"tag": "li", "class": "stream", "text": "歌枠"},
+				{"tag": "li", "class": "stream", "text": "/"},
+				{"tag": "li", "class": "stream", "text": "ゲーム配信"},
+				{"tag": "li", "class": "stream", "text": "/"}
+			]}
+		]}
+	],
+	"data-sub-content": [
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "夢"},
+			{"tag": "li", "class": "data-protocol", "text": ""}
+		]},
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "趣味"},
+			{"tag": "li", "class": "data-protocol", "text": ""}
+		]},
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "好きなもの"},
+			{"tag": "li", "class": "data-protocol", "text": ""}
+		]},
+		{"tag": "ul", "class": "data-block", "children":[
+			{"tag": "li", "class": "data-title", "text": "特技"},
+			{"tag": "li", "class": "data-protocol", "text": ""}
+		]}
+	]
+}
