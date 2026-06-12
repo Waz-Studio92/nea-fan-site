@@ -133,12 +133,6 @@
 					{"tag": "a", "href": "https://x.com/search?q=%23%E9%9B%A8%E8%A6%8B%E3%81%AD%E3%81%82%E3%83%BC%E3%81%A8&src=typed_query&f=top", "class": "hash-link", "target": "blank", "children":[
 						{"tag": "p", "class": "hash-text", "text": "#雨見ねあーと"}
 					]}
-				]},
-				{"tag": "li", "class": "hash", "children":[
-					{"tag": "p", "class": "hash-title", "text": "スケジュール:"},
-					{"tag": "a", "href": "https://x.com/search?q=%23%E3%81%AD%E3%81%82%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB&src=typed_query", "class": "hash-link", "target": "blank", "children":[
-						{"tag": "p", "class": "hash-text", "text": "#ねあジュール"}
-					]}
 				]}
 			]}
 		]},
@@ -161,19 +155,9 @@
 			{"tag": "li", "class": "data-title", "text": "趣味"},
 			{"tag": "li", "class": "data-protocol", "text": ""}
 		]},
-		{"tag": "ul", "class": "data-block like", "children":[
+		{"tag": "ul", "class": "data-block", "children":[
 			{"tag": "li", "class": "data-title", "text": "好きなもの"},
-			{"tag": "li", "class": "data-protocol", "children":[
-				{"tag": "p", "text": "いくら・歌・アニメ・ゲーム・漫画"},
-				{"tag": "p", "text": "お菓子・ガンプラ・ボードゲーム...etc"}
-			]}
-		]},
-		{"tag": "ul", "class": "data-block weak", "children":[
-			{"tag": "li", "class": "data-title", "text": "苦手なもの"},
-			{"tag": "li", "class": "data-protocol", "children":[
-				{"tag": "p", "text": "野菜・おばけ(ホラー系)・虫"},
-				{"tag": "p", "text": "暑い・寒い・勉強・暗闇...etc"}
-			]}
+			{"tag": "li", "class": "data-protocol", "text": ""}
 		]},
 		{"tag": "ul", "class": "data-block", "children":[
 			{"tag": "li", "class": "data-title", "text": "特技"},
