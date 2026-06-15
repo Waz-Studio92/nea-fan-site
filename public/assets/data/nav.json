@@ -3,7 +3,7 @@
 		{ "id": "#header", "dataKey": "headerContent", "callback": "setNav" },
 		{ "id": "#footer", "dataKey": "footerContent", "callback": "null" },
 		{ "id": "#page", "dataKey": "page", "callback": "null" },
-		{ "id": "#page-sing", "dataKey": "pageNav", "callback": "null" },
+		{ "id": "#page-song", "dataKey": "pageNav", "callback": "null" },
 		{ "id": "#page-guide", "dataKey": "pageRun", "callback": "null" },
 		{ "id": "#data-main", "dataKey": "data-main-content", "callback": "null" },
 		{ "id": "#data-sub", "dataKey": "data-sub-content", "callback": "null" }
@@ -52,19 +52,19 @@
 		{"tag": "span", "class": "copy", "text": "2026 WAZ VIDEO CREATE STUDIO"}
 	],
 	"page": [
-		{"tag": "div", "class": "page-block", "children":[
+		{"tag": "div", "class": "page", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"}
 		]}
 	],
 	"pageNav": [
-		{"tag": "div", "class": "page-block", "children":[
+		{"tag": "div", "class": "page-content", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
 			{"tag": "div", "text": ">"},
 			{"tag": "span", "class": "nomal", "text": "SONG_LIST"}
 		]}
 	],
 	"pageRun": [
-		{"tag": "div", "class": "page-block", "children":[
+		{"tag": "div", "class": "page", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
 			{"tag": "div", "text": ">"},
 			{"tag": "span", "class": "nomal", "text": "guide-line"}
@@ -155,9 +155,19 @@
 			{"tag": "li", "class": "data-title", "text": "趣味"},
 			{"tag": "li", "class": "data-protocol", "text": ""}
 		]},
-		{"tag": "ul", "class": "data-block", "children":[
+		{"tag": "ul", "class": "data-block like", "children":[
 			{"tag": "li", "class": "data-title", "text": "好きなもの"},
-			{"tag": "li", "class": "data-protocol", "text": ""}
+			{"tag": "ul", "class": "data-protocol", "children":[
+				{"tag": "li", "text": "イクラ・歌・アニメ・ゲーム・漫画"},
+				{"tag": "li", "text": "お菓子・ガンプラ・ボードゲーム...etc"}
+			]}
+		]},
+		{"tag": "ul", "class": "data-block weak-point", "children":[
+			{"tag": "li", "class": "data-title", "text": "苦手なもの"},
+			{"tag": "ul", "class": "data-protocol", "children":[
+				{"tag": "li", "text": "野菜・おばけ(ホラー系)・虫"},
+				{"tag": "li", "text": "暑い・寒い・勉強・暗闇...etc"}
+			]}
 		]},
 		{"tag": "ul", "class": "data-block", "children":[
 			{"tag": "li", "class": "data-title", "text": "特技"},
