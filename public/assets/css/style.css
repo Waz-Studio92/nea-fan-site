@@ -74,6 +74,9 @@ body {
 }
 
 .modified {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	align-items: center;
 	background-color: #ddd;
 	padding: 5px 10px;
@@ -86,10 +89,8 @@ body {
 	}
 }
 
-.modified {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+.modified .paragraph {
+	margin-top: 0;
 }
 
 time {
@@ -335,6 +336,7 @@ time {
 	width: 90%;
 	gap: 1em;
 	margin: 2em auto;
+
 }
 
 .prologue,
@@ -342,6 +344,10 @@ time {
 	margin: 0;
 	font-size: 18px;
 	font-weight: 500;
+	
+	@media (max-width:365px) {
+		font-size: 14px;
+	}
 }
 
 .explanation time {

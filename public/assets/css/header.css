@@ -150,6 +150,10 @@
 	@media (min-width:768px) {
 		padding: 0;
 	}
+
+	@media (max-width:364px) {
+		font-size: 15px;
+	}
 }
 
 .nav-link {
