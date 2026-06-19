@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	try {
 		// 1. 設定ファイルの読み込み
-		const configResponse = await fetch('./assets/data/nav.json');
-		if (!configResponse.ok) throw new Error('Config load failed');
-		const config = await configResponse.json();
+		const Res = await fetch('./assets/data/nav.json');
+		if (!Res.ok) throw new Error('Config load failed');
+		const config = await Res.json();
 
 		config.parts.forEach(part => {
 
