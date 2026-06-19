@@ -83,37 +83,38 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const config = await Res.json();
 
 		config.parts.forEach(part => {
-
-			const contentContainerId = part.id.replace('#', '');
-			const container = document.getElementById(contentContainerId);
-
+			
+			const container = document.querySelector(part.id);
+			
 			const dataKey = part.dataKey;
 			const dataList = config[dataKey];
-
+			
 			if (container && dataList) {
+				
 				const fragment = document.createDocumentFragment();
-
+				
 				dataList.forEach(data => {
 					const el = createNav(data);
 					fragment.appendChild(el);
 				});
-
+				
 				container.appendChild(fragment);
+				
 			}
-
+			
 			// 💡【ここが重要！】各パーツの流し込みが終わった『直後』に、そのパーツのcallbackを呼び出す！
 			if (part.callback && callbacks[part.callback]) {
 				callbacks[part.callback](); // ここで setNav が実行され、toggleにイベントがつく！
-			}
+			}	
 		});
-
+		
 		setTimeout(() => {
 			document.body.classList.add('is-show');
 		}, 100);
 
 		setTimeout(() => {
 			svg.classList.remove('is-loading');
-		}, 200);
+		}, 100);
 
 	} catch (e) {
 		console.error(e);
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		setTimeout(() => {
 			svg.classList.remove('is-show');
-		}, 200);
+		}, 100);
 	}
 
 	function setAccordion() {
