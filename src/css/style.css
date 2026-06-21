@@ -334,7 +334,10 @@ time {
 	width: 90%;
 	gap: 1em;
 	margin: 2em auto;
+}
 
+.txt-art p {
+	color: #94a4ff;
 }
 
 .prologue,
@@ -388,6 +391,10 @@ video {
 	max-width: 1000px;
 	margin: 0 auto;
 	line-height: 2;
+}
+
+.guide-points li {
+	color: #94a4ff;
 }
 
 .guide-sub-title {
@@ -577,8 +584,8 @@ video {
 	max-width: 800px;
 	padding: 1rem 1rem 1rem 2rem;
 	background-color: #ddecff;
-	border: 2px solid #000080;
-	box-shadow: 10px 10px 0 #000080;
+	border: 2px solid navy;
+	box-shadow: 10px 10px 0 navy;
 }
 
 .list-title {
@@ -825,7 +832,6 @@ video {
 	color: #94a4ff;
 	transition: .4s ease;
 }
-
 
 .song-box li span:nth-child(1),
 .song-box li span:nth-child(2) {

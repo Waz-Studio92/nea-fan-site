@@ -52,19 +52,19 @@
 		{"tag": "span", "class": "copy", "text": "2026 WAZ VIDEO CREATE STUDIO"}
 	],
 	"page": [
-		{"tag": "div", "class": "page", "children":[
+		{"tag": "div", "class": "page-block", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"}
 		]}
 	],
 	"pageNav": [
-		{"tag": "div", "class": "page-content", "children":[
+		{"tag": "div", "class": "page-block", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
 			{"tag": "div", "text": ">"},
 			{"tag": "span", "class": "nomal", "text": "SONG_LIST"}
 		]}
 	],
 	"pageRun": [
-		{"tag": "div", "class": "page", "children":[
+		{"tag": "div", "class": "page-block", "children":[
 			{"tag": "a", "href": "index.html", "class": "page-link", "text": "TOP"},
 			{"tag": "div", "text": ">"},
 			{"tag": "span", "class": "nomal", "text": "guide-line"}
@@ -157,14 +157,14 @@
 		]},
 		{"tag": "ul", "class": "data-block like", "children":[
 			{"tag": "li", "class": "data-title", "text": "好きなもの"},
-			{"tag": "ul", "class": "data-protocol", "children":[
+			{"tag": "li", "class": "data-protocol", "children":[
 				{"tag": "li", "text": "イクラ・歌・アニメ・ゲーム・漫画"},
 				{"tag": "li", "text": "お菓子・ガンプラ・ボードゲーム...etc"}
 			]}
 		]},
-		{"tag": "ul", "class": "data-block weak-point", "children":[
+		{"tag": "ul", "class": "data-block week-point", "children":[
 			{"tag": "li", "class": "data-title", "text": "苦手なもの"},
-			{"tag": "ul", "class": "data-protocol", "children":[
+			{"tag": "li", "class": "data-protocol", "children":[
 				{"tag": "li", "text": "野菜・おばけ(ホラー系)・虫"},
 				{"tag": "li", "text": "暑い・寒い・勉強・暗闇...etc"}
 			]}

@@ -22,12 +22,11 @@
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: var(--default-font-size);
 	color: var(--text-color);
 	min-width: 320px;
+	margin: 0;
 }
 
 body.is-open {
@@ -43,9 +42,7 @@ main {
 	min-height: 100vh;
 }
 
-a,
-img,
-span {
+a,img,span {
 	display: block;
 }
 
