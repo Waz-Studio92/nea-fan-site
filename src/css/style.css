@@ -362,11 +362,6 @@ time {
 	width: fit-content;
 }
 
-small {
-	font-size: 19px;
-	font-weight: 500;
-}
-
 video {
 	width: 90%;
 	height: auto;
@@ -451,7 +446,7 @@ video {
 }
 
 .col:hover {
-	transform: scale(1.2);
+	transform: scale(1.08);
 }
 
 .data-base {
