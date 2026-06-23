@@ -130,8 +130,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}, 100);
 	}
 
+	const target = document.querySelector('.top-btn');
+	const pickupSection = document.querySelector('.pick-up');
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				target.classList.add('is-show');
+			} else {
+				target.classList.remove('is-show');
+			}
+		});
+	}, {
+		threshold: .2
+	});
+
+	if (pickupSection) {
+		observer.observe(pickupSection);
+	}
+
+	// アコーディオン用の関数
 	function setAccordion() {
-		// アコーディオン用の関数（将来用だな！）
 	}
 
 });
