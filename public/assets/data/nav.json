@@ -2,6 +2,7 @@
 	"parts": [
 		{ "id": "#header", "dataKey": "headerContent", "callback": "setNav" },
 		{ "id": "#footer", "dataKey": "footerContent", "callback": "null" },
+		{ "id": "#sidebar", "dataKey": "sideContent", "callback": "null" },
 		{ "id": "#page", "dataKey": "page", "callback": "null" },
 		{ "id": "#page-song", "dataKey": "pageNav", "callback": "null" },
 		{ "id": "#page-guide", "dataKey": "pageRun", "callback": "null" },
@@ -50,6 +51,36 @@
 			]}
 		]},
 		{"tag": "span", "class": "copy", "text": "2026 WAZ VIDEO CREATE STUDIO"}
+	],
+	"sideContent": [
+		{"tag": "div", "class": "sidebar", "children":[
+		{"tag": "nav", "class": "side-nav", "children":[
+			{"tag": "input", "type": "checkbox", "id": "side-nav-toggle", "class": "side-nav-toggle"},
+				{"tag": "label", "for": "side-nav-toggle", "class": "side-nav-btn", "aria-label": "menu-open/close", "children": [
+					{"tag": "span"},
+					{"tag": "span"},
+					{"tag": "span"}
+				]},
+			{"tag": "label", "for": "side-nav-toggle", "class": "nav-overlay"},
+			{"tag": "ul", "class": "nav-content", "children":[
+				{"tag": "li", "class": "nav-content-item", "children":[
+					{"tag": "a", "href": "#profile", "class": "nav-content-link", "text": "PROFILE"}
+					]},
+				{"tag": "li", "class": "nav-content-item", "children":[
+					{"tag": "a", "href": "#data", "class": "nav-content-link", "text": "DATA"}
+				]},
+				{"tag": "li", "class": "nav-content-item", "children":[
+					{"tag": "a", "href": "#recommend", "class": "nav-content-link", "text": "RECOMMEND"}
+				]},
+				{"tag": "li", "class": "nav-content-item", "children":[
+					{"tag": "a", "href": "#pick-up", "class": "nav-content-link", "text": "PICKUP"}
+				]},
+				{"tag": "li", "class": "nav-content-item", "children":[
+					{"tag": "a", "href": "#song", "class": "nav-content-link", "text": "SONGS"}
+				]}
+			]}
+		]}
+		]}
 	],
 	"page": [
 		{"tag": "div", "class": "page-block", "children":[

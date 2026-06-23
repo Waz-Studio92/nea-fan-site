@@ -1,4 +1,4 @@
-import'/src/css/style.css'
+import'/src/css/style.scss'
 
 function createNav(item) {
 	const {tag,text,children,id,type,class: className,for: htmlFor, ...attrs} = item;

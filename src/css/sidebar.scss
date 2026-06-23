@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+#sidebar {
+	width: fit-content;
+}
+
+.sidebar {
+	width: 200px;
+	position: sticky;
+	left: 0;
+	top: 9%;
+  bottom: 0;
+	align-self: start;
+	
+	@media (max-width:768px) {
+		position: relative;
+		top: 0;
+		left: 0;
+    bottom: 0;
+		z-index: 99;
+    margin-top: 10px;
+	}
+}
+
+.side-nav-toggle {
+	display: none;
+}
+
+.side-nav-btn {
+	display: block;
+	width: 44px;
+	height: 44px;
+	position: relative;
+	left: 10px;
+	border-radius: 7px;
+	transition: .3s ease;
+	cursor: pointer;
+	pointer-events: auto;
+
+	@media (min-width:768px) {
+		display: none;
+    pointer-events: none;
+	}
+}
+
+.side-nav-btn:hover,
+.side-nav-btn:focus {
+	background-color: #94a4ff;
+}
+
+.side-nav-btn span {
+	background-color: #333;
+	width: 24px;
+	height: 2px;
+	position: absolute;
+	top: 14px;
+	left: 10px;
+	right: 10px;
+	transition: .3s ease;
+
+	@media (min-width:768px) {
+		display: none;
+	}
+}
+
+.side-nav-btn span:nth-child(1) {
+	top: 14px;
+}
+
+.side-nav-btn span:nth-child(2) {
+	top: 21px;
+}
+
+.side-nav-btn span:nth-child(3) {
+	top: 28px;
+}
+
+#side-nav-toggle:checked +.side-nav-btn span:nth-child(1) {
+	top: 21px;
+	transform: rotate(45deg);
+}
+
+#side-nav-toggle:checked +.side-nav-btn span:nth-child(2) {
+	opacity: 0;
+}
+
+#side-nav-toggle:checked +.side-nav-btn span:nth-child(3) {
+	top: 21px;
+	transform: rotate(-45deg);
+}
+
+.nav-content {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0 0 1rem;
+	gap: 1rem;
+
+  @media (max-width:768px) {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 2rem 0 0 2rem;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    gap: 1rem;
+    width: 50%;
+    max-width: 420px;
+    list-style: none;
+    transform: scaleX(0);
+    transform-origin: right;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    opacity: 0;
+    z-index: 400;
+  }
+}
+
+#side-nav-toggle:checked ~ .nav-content {
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+    transition-delay: .15s;
+}
+
+.nav-content-link {
+	width: fit-content;
+	font-size: 20px;
+	font-weight: 600;
+
+  @media (max-width:330px) {
+    font-size: 15px;
+  }
+}
+
+.nav-overlay {
+	position: fixed;
+	inset: 0;
+	background: var(--sub-bg-color);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .25s ease;
+	z-index: 200;
+}
+
+.side-nav-toggle:checked~.nav-overlay {
+	opacity: 1;
+	pointer-events: auto;
+}

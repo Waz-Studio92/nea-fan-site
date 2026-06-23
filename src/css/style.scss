@@ -1,8 +1,9 @@
 @charset "utf-8";
 
-@import url(base.css);
-@import url(header.css);
-@import url(footer.css);
+@import url("./base.scss");
+@import url("./header.scss");
+@import url("./footer.scss");
+@import url("./sidebar.scss");
 
 body {
 	position: relative;
@@ -152,10 +153,10 @@ time {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: var(--header-height) auto 0 auto;
+	margin: var(--header-height) auto 0;
 	width: fit-content;
 
-	@media (min-width:930px) {
+	@media (min-width:990px) {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -165,8 +166,9 @@ time {
 }
 
 .expo_body {
-	width: 100%;
+	width: fit-content;
 	padding: 0 1rem;
+	margin: 0 auto;
 
 	@media (min-width:768px) {
 		width: fit-content;
@@ -179,9 +181,15 @@ time {
 	align-items: center;
 	gap: 2em;
 	justify-content: center;
-
+	width: fit-content;
+	margin: 0 auto;
+	
 	@media (min-width:768px) {
 		justify-content: initial;
+	}
+
+	@media (max-width:480px) {
+		margin: 0 auto;
 	}
 }
 
@@ -192,7 +200,7 @@ time {
 }
 
 
-@media screen and (max-width:380px) {
+@media screen and (max-width:480px) {
 	.img_box {
 		display: none;
 	}
@@ -210,12 +218,19 @@ time {
 }
 
 .character_img {
+	display: block;
 	width: 50%;
 	height: auto;
 
 	@media (min-width:768px) {
 		width: 100%;
 		height: auto;
+	}
+
+	@media (max-width:480px) {
+		width: 90%;
+		height: auto;
+		min-height: 400px;
 	}
 }
 
@@ -224,7 +239,8 @@ time {
 	margin: 2em auto;
 	padding: 2rem 1rem;
 	display: block;
-	width: min(90%, 500px);
+	width: 90%;
+	max-width: 500px;
 	height: auto;
 	text-align: center;
 	align-items: stretch;
@@ -760,7 +776,7 @@ video {
 }
 
 .song {
-	padding: 0 1rem;
+	padding: 0 1rem
 }
 
 .song-box {
@@ -833,4 +849,51 @@ video {
 	@media (max-width:360px) {
 		font-size: 13px;
 	}
+}
+
+.content-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 70px 0 0 0;
+
+	@media (min-width:768px) {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+	}
+}
+
+.top-btn {
+	display: flex;
+	flex-direction: column;
+	width: 80px;
+	height: 80px;
+	background-color: #94a4ff;
+	border: 1px solid #eee;
+	overflow: hidden;
+	border-radius: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	position: fixed;
+	right: 10px;
+	bottom: 200px;
+	z-index: 200;
+}
+
+.arrow {
+	width: 20px;
+	height: auto;
+
+}
+
+.top-txt {
+	display: block;
+	font-size: 13px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.top-btn:hover .top-txt {
+	text-decoration: underline;
 }
