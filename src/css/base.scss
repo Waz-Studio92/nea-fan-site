@@ -22,6 +22,7 @@
 	--outline-color: #00acee;
 	--modified-base-color: #ddd;
 	--sidenav-btn__span-color: #333;
+	--timeline-bg-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,7 @@
 		--outline-color: #00acee;
 		--modified-base-color: #9e9e9e;
 		--sidenav-btn__span-color: #eee;
+		--timeline-bg-color: #555;
 	}
 }
 
