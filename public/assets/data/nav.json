@@ -6,8 +6,8 @@
 		{ "id": "#page", "dataKey": "page", "callback": "null" },
 		{ "id": "#page-song", "dataKey": "pageNav", "callback": "null" },
 		{ "id": "#page-guide", "dataKey": "pageRun", "callback": "null" },
-		{ "id": "#data-main", "dataKey": "data-main-content", "callback": "null" },
-		{ "id": "#data-sub", "dataKey": "data-sub-content", "callback": "null" }
+		{ "id": "#data-main", "dataKey": "dataMainContent", "callback": "null" },
+		{ "id": "#data-sub", "dataKey": "dataSubContent", "callback": "null" }
 	],
 	"headerContent": [
 		{ "tag": "header", "class": "header", "children": [
@@ -114,7 +114,7 @@
 			{"tag": "span", "class": "nomal", "text": "guide-line"}
 		]}
 	],
-	"data-main-content": [
+	"dataMainContent": [
 		{"tag": "ul", "class": "data-block", "children":[
 			{"tag": "li", "class": "data-title", "text": "初配信日"},
 			{"tag": "li", "class": "data-protocol", "children":[
@@ -190,7 +190,7 @@
 			]}
 		]}
 	],
-	"data-sub-content": [
+	"dataSubContent": [
 		{"tag": "ul", "class": "data-block", "children":[
 			{"tag": "li", "class": "data-title", "text": "夢"},
 			{"tag": "li", "class": "data-protocol", "text": ""}
