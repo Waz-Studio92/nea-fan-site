@@ -17,7 +17,46 @@
 	<svg class="load-svg"></svg>
 	<div id="header"></div>
 	<main>
-
+		<section class="section notice-sec">
+			<article class="notice"></article>
+		</section>
+		<div id="timeline" class="timeline"></div>
+		<section class="section form">
+			<form action="" method="" class="bbs__table">
+				<div class="field">
+					<label for="name" class="field__label" aria-label="お名前">お名前:</label>
+					<input id="name" name="name" type="text" class="field__protocol" placeholder="お名前を入力してください">
+				</div>
+				<div class="field">
+					<label for="category" class="field__label">カテゴリー</label>
+					<select name="" id="category" class="category" aria-label="カテゴリー">
+						<option value="0">選択してください</option>
+						<option value="1">配信の感想</option>
+						<option value="2">歌ってみたのここがいい！</option>
+						<option value="3">雨見ねあのここ好きポイント</option>
+						<option value="4"></option>
+						<option value="5"></option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="title" class="field__label">タイトル:</label>
+					<input type="text" id="title" class="field__protocol" placeholder="タイトルを入力してください">
+				</div>
+				<div class="field">
+					<label for="paragraph" class="field__label">本文:</label>
+					<textarea type="text" id="paragraph" class="field__protocol textarea" placeholder="メッセージを入力してください"></textarea>
+				</div>
+				<div class="field-row">
+					<div class="delete-key-box">
+						<div class="delete-key-block">
+							<label for="delete" class="delete-label">削除キー:</label>
+							<input type="password" id="delete" class="delete-key">
+						</div>
+					</div>
+					<button class="submit" aria-label="送信ボタン">書き込む</button>
+				</div>
+			</form>
+		</section>
 	</main>
 	<div id="footer"></div>
 	<script type="module" src="/src/js/index.js"></script>
