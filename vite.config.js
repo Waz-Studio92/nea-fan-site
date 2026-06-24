@@ -7,6 +7,7 @@ export default defineConfig({
         'index.html',
         'guide-line.html',
         'sing_list.html',
+        'bbs.html',
       ]
     },
   },
