@@ -31,6 +31,9 @@
 					]},
 					{"tag": "li", "class": "nav-item", "children":[
 						{"tag": "a", "href": "sing_list.html", "class": "nav-link", "text": "SING PAGE"}
+					]},
+					{"tag": "li", "class": "nav-item", "children":[
+						{"tag": "a", "href": "bbs.html", "class": "nav-link", "text": "掲示板"}
 					]}
 				]}
 			]}
@@ -64,19 +67,29 @@
 			{"tag": "label", "for": "side-nav-toggle", "class": "nav-overlay"},
 			{"tag": "ul", "class": "nav-content", "children":[
 				{"tag": "li", "class": "nav-content-item", "children":[
-					{"tag": "a", "href": "#profile", "class": "nav-content-link", "text": "PROFILE"}
+					{"tag": "a", "href": "#profile", "class": "nav-content-link", "children":[
+						{"tag": "span", "text": "PROFILE"}
+					]}
 					]},
 				{"tag": "li", "class": "nav-content-item", "children":[
-					{"tag": "a", "href": "#data", "class": "nav-content-link", "text": "DATA"}
+					{"tag": "a", "href": "#data", "class": "nav-content-link", "children":[
+						{"tag": "span", "text": "DATA"}
+					]}
 				]},
 				{"tag": "li", "class": "nav-content-item", "children":[
-					{"tag": "a", "href": "#recommend", "class": "nav-content-link", "text": "RECOMMEND"}
+					{"tag": "a", "href": "#recommend", "class": "nav-content-link", "children":[
+						{"tag": "span", "text": "RECOMMEND"}
+					]}
 				]},
 				{"tag": "li", "class": "nav-content-item", "children":[
-					{"tag": "a", "href": "#pick-up", "class": "nav-content-link", "text": "PICKUP"}
+					{"tag": "a", "href": "#pick-up", "class": "nav-content-link", "children":[
+						{"tag": "span", "text": "PICKUP"}
+					]}
 				]},
 				{"tag": "li", "class": "nav-content-item", "children":[
-					{"tag": "a", "href": "#song", "class": "nav-content-link", "text": "SONGS"}
+					{"tag": "a", "href": "#song", "class": "nav-content-link", "children":[
+						{"tag": "span", "text": "SONGS"}
+					]}
 				]}
 			]}
 		]}

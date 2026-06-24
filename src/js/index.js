@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	// 1. コールバック関数をここにまとめる（安全なオブジェクト管理）
 	const callbacks = {
 		setNav: () => {
-			console.log('Nav initialized');
+			console.log('ナビゲーションセットアップが完了しました');
 		}
 	};
 
@@ -37,43 +37,43 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}
 	});
 
-	// SVGの生成ロジック（ここは変更なし）
+	// SVGの生成ロジック（改修）
+	const createSvgElement = (tagName, attributes, parentElement = null) => {
+		const el = document.createElementNS('http://www.w3.org/2000/svg', tagName);
+
+		Object.entries(attributes).forEach(([Key, value]) => el.setAttribute(Key, value));
+			if (parentElement) parentElement.appendChild(el);
+
+			return el;
+	};
+
 	const svg = document.querySelector('.load-svg');
-	const svgNs = 'http://www.w3.org/2000/svg';
-	const defs = document.createElementNS(svgNs, 'defs');
-	svg.appendChild(defs);
 
-	const gradient = document.createElementNS(svgNs, 'linearGradient');
-	gradient.id = 'grad1';
-	gradient.setAttribute('x1', '0%');
-	gradient.setAttribute('y1', '0%');
-	gradient.setAttribute('x2', '100%');
-	gradient.setAttribute('y2', '100%');
-	defs.appendChild(gradient);
+	const defs = createSvgElement('defs', {}, svg);
 
-	const startColor = document.createElementNS(svgNs, 'stop');
-	startColor.setAttribute('offset', '0%');
-	startColor.setAttribute('stop-color', '#000080');
-	gradient.appendChild(startColor);
+	const gradient = createSvgElement('linearGradient', {
+		id: 'grad1', 
+		'x1': '0%',
+		'y1': '0%',
+		'x2': '100%',
+		'y2': '100%'
+	}, defs);
 
-	const endColor = document.createElementNS(svgNs, 'stop');
-	endColor.setAttribute('offset', '100%');
-	endColor.setAttribute('stop-color', '#80ffff');
-	gradient.appendChild(endColor);
+	createSvgElement('stop', {'offset': '0%', 'stop-color': '#000080'}, gradient);
+	createSvgElement('stop', {'offset': '100%', 'stop-color': '#80ffff'}, gradient);
 
-	const circle = document.createElementNS(svgNs, 'circle');
-	circle.setAttribute('viewBox', '0 0 0 0');
-	circle.setAttribute('width', '200');
-	circle.setAttribute('height', '200');
-	circle.setAttribute('cx', '95');
-	circle.setAttribute('cy', '95');
-	circle.setAttribute('r', '80');
+	createSvgElement('circle', {
+		'viewBox': '0 0 0 0',
+		'width': '200',
+		'height': '200',
+		'cx': '95',
+		'cy': '95',
+		'r': '80',
+		'fill': 'none',
+		'stroke': 'url(#grad1)',
+		'stroke-width': '25'
+	}, svg);
 
-	circle.setAttribute('fill', 'none');
-	circle.setAttribute('stroke', 'url(#grad1)');
-	circle.setAttribute('stroke-width', '25');
-
-	svg.appendChild(circle);
 	svg.classList.add('is-loading');
 
 	try {
@@ -102,9 +102,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 				
 			}
 			
-			// 💡【ここが重要！】各パーツの流し込みが終わった『直後』に、そのパーツのcallbackを呼び出す！
 			if (part.callback && callbacks[part.callback]) {
-				callbacks[part.callback](); // ここで setNav が実行され、toggleにイベントがつく！
+				callbacks[part.callback]();
 			}	
 		});
 		
@@ -119,11 +118,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 	} catch (e) {
 		console.error(e);
 
-		const errorBox = document.createElement('div');
-		errorBox.className = 'error-box';
-		errorBox.textContent = 'データの読み込みに失敗しました。後でもう一度お試しください。';
+		const errorTxt = document.createElement('p');
+		errorTxt.className = 'error-box';
+		errorTxt.textContent = 'データの読み込みに失敗しました。後でもう一度お試しください。';
 
-		document.body.appendChild(errorBox);
+		document.body.appendChild(errorTxt);
 
 		setTimeout(() => {
 			svg.classList.remove('is-show');

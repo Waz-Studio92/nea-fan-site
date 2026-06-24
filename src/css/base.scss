@@ -9,16 +9,37 @@
 /* body */
 
 :root {
-	--bg-color: #44baff;
-	--bg-sub-color: #44b1ff;
+	--header-bg-color: #44baff;
+	--base-bg-color: #fff;
 	--border-color: rgba(0, 0, 0, .3);
 	--default-font-size: 15px;
 	--header-height: 72px;
 	--main-shadow-color: rgba(0, 0, 0, .14);
+	--recommend-base-color: #fafcff;
 	--sub-color: #fff;
 	--sub-bg-color: rgba(0, 0, 0, .3);
 	--text-color: #333;
 	--outline-color: #00acee;
+	--modified-base-color: #ddd;
+	--sidenav-btn__span-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--header-bg-color: #44baff;
+		--base-bg-color: #333;
+		--border-color: rgba(255, 255, 255, .3);
+		--default-font-size: 15px;
+		--header-height: 72px;
+		--main-shadow-color: rgba(0, 0, 0, .14);
+		--recommend-base-color: #505050;
+		--sub-color: #fff;
+		--sub-bg-color: rgba(0, 0, 0, .3);
+		--text-color: #eee;
+		--outline-color: #00acee;
+		--modified-base-color: #9e9e9e;
+		--sidenav-btn__span-color: #eee;
+	}
 }
 
 html {
@@ -26,14 +47,17 @@ html {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scrollbar-width: thin;
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Noto Sans JP", 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Meiryo UI',YuGothic,'Yu Gothic','Arial','Helvetica Neue','Helvetica',sans-serif;
 	font-size: var(--default-font-size);
 	color: var(--text-color);
 	min-width: 320px;
 	margin: 0;
+	position: relative;
+	background-color: var(--base-bg-color);
 }
 
 body.is-open {
